@@ -1,4 +1,22 @@
 /* String functions section */
+std::vector<bool> OddMask(std::vector<int> numbers) {
+	std::vector<bool> to_be_returned;
+	for (int i = 0; i < numbers.size(); i++) {
+		if (numbers[i] % 2 == 0) {
+			to_be_returned.push_back(false);
+		}
+		else {
+			to_be_returned.push_back(true);
+		}
+	}
+	return to_be_returned;
+}
+std::vector<int> VectorPlusN(std::vector<int> v, int n){
+	for (int i = 0; i < v.size(); i++) {
+		v[i] += n;
+	}
+	
+}
 
 // Splits a single string on separator into a vector of strings
 std::vector<std::string> Split(std::string whole, std::string separator);
