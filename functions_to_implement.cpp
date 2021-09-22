@@ -1,3 +1,7 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
 std::vector<bool> OddMask(std::vector<int> numbers) {
 	std::vector<bool> to_be_returned;
 	for (int i = 0; i < numbers.size(); i++) {
@@ -93,7 +97,6 @@ std::vector<bool> LessMask(std::vector<int> nums, int less_than);
 
 // Sums all numbers in a vector and returns the resulting value
 
-double Sum(std::vector<double> nums);
 double Sum(std::vector<double> nums) {
     double total = 0;
     for (int i = 0; i < nums.capacity(); i++) {
@@ -140,3 +143,4 @@ std::vector<int> SubtractN(std::vector<int>, int n);
 
 // subtracts n to each element of the vector
 std::vector<double> SubtractN(std::vector<double>, double n);
+
