@@ -1,11 +1,25 @@
-/* String functions section */
+#include <iostream>
+#include <vector>
+#include <string>
 
-// Splits a single string on separator into a vector of strings
-std::vector<std::string> Split(std::string whole, std::string separator);
-
-// takes two strings and returns a new string that is the result of removing all occurrences of s2 from s1.
-std::string RemoveAllSubstrings(std::string s1, std::string s2);
-
+std::vector<bool> OddMask(std::vector<int> numbers) {
+	std::vector<bool> to_be_returned;
+	for (int i = 0; i < numbers.size(); i++) {
+		if (numbers[i] % 2 == 0) {
+			to_be_returned.push_back(false);
+		}
+		else {
+			to_be_returned.push_back(true);
+		}
+	}
+	return to_be_returned;
+}
+std::vector<int> VectorPlusN(std::vector<int> v, int n){
+	for (int i = 0; i < v.size(); i++) {
+		v[i] += n;
+	}
+	return v;			
+}
 // takes two strings and returns a new string that is the result of removing the first occurrence of s2 from s1.
 std::string RemoveFirstSubstring(std::string s1, std::string s2);
 
@@ -83,7 +97,6 @@ std::vector<bool> LessMask(std::vector<int> nums, int less_than);
 
 // Sums all numbers in a vector and returns the resulting value
 
-double Sum(std::vector<double> nums);
 double Sum(std::vector<double> nums) {
     double total = 0;
     for (int i = 0; i < nums.capacity(); i++) {
@@ -130,3 +143,4 @@ std::vector<int> SubtractN(std::vector<int>, int n);
 
 // subtracts n to each element of the vector
 std::vector<double> SubtractN(std::vector<double>, double n);
+
