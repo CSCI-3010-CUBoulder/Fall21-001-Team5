@@ -14,3 +14,10 @@ TEST_CASE("connor test", "[connor]") {
 	REQUIRE(OddMask(new_vector2) == answer_vector2);
 	REQUIRE(OddMask(new_vector3) == answer_vector3);
 }
+
+TEST_CASE("sign test", "[sign]") {
+    REQUIRE(Sign(-5.0) == -1.0);
+    REQUIRE(Sign(3.0) == 1.0);
+    REQUIRE(Sign(3) == 1);
+    REQUIRE(Sign(-12) == -1);
+}
